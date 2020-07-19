@@ -1,5 +1,5 @@
 # django-auth-app
-Reusable authentication app for django project
+Reusable authentication and registration app for django project
 
 # Config
 INSTALLED_APPS = [
