@@ -43,3 +43,5 @@ SOCIALACCOUNT_PROVIDERS = {
         ],
     }
 }
+
+https://django-allauth.readthedocs.io/en/latest/providers.html
