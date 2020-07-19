@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+{% load i18n static %}
+<html lang="en" >
+  <head>
+    <meta charset="utf-8">
+    <title>{% block title %}Auth{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/fontawesome/css/font-awesome.css' %}">
+    {% block stylesheet %}{% endblock %}
+  </head>
+  <body>
+  <div class="wrapper">
+    <div class="container" id="container">
+      <div class="sign-up-container">
+        {% include 'includes/sign-up.html' %}
+      </div>
+      <div class="sign-in-container">
+        {% include 'includes/sign-in.html' %}
+      </div>
+      <div class="overlay-container">
+        <div class="overlay-left" style="background-color: #011C2D;color: #FFFFFF;font-family:'Helvetica', sans-serif;">
+          {% include 'includes/stark.html' %}
+        </div>
+        <div class="overlay-right" style="background-color: #011C2D;color: #FFFFFF;font-family:'Helvetica', sans-serif;">
+          {% include 'includes/stark.html' %}
+        </div>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript" src="/static/js/overlay.js"></script>
+  {% block javascript %}{% endblock %}
+  </body>
+</html>

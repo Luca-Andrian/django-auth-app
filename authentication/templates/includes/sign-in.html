@@ -1,0 +1,23 @@
+{% load socialaccount %}
+<form method="POST" data-parsley-validate enctype="multipart/form-data">
+{% csrf_token %}
+  {{ errors }}
+  <h1>Log In</h1>
+  <div class="social-links">
+    <div>
+      <a href="{% provider_login_url 'google' method='oauth2' %}"><i class="fa fa-google" aria-hidden="true"></i></a>
+    </div>
+    <div>
+      <a href="{% provider_login_url 'github' method='oauth2' %}"><i class="fa fa-github" aria-hidden="true"></i></a>
+    </div>
+    <div>
+      <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+    </div>
+  </div>
+  <span>or use your account</span>
+  <input type="text" placeholder="Username" name="{{ form.username.name }}" value="{{ form.username.value }}"/>
+  <input type="password" placeholder="Password" name="{{ form.password.name }}" value="{{ form.password.value }}"/>
+  <button type="submit" class="form_btn" name="signin">Sign In</button>
+  <span><a href="#" style="text-decoration: none;">Forgot your password?</a></span>
+  <span>Create your account <a id="signUp" href="#" style="text-decoration: none;">Here</a></span>
+</form>
